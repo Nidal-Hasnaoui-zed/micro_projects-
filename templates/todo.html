@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}To do list App {% endblock title %}
+
+{% block CSS %}{% endblock CSS %}
+
+{% block body %}
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List<img src="images/notes.png"></h2> 
+            <div class="row">
+               <input type="text" id="input-box" placeholder="Enter Your Text Here:"> 
+               <button onclick="addTask()">ADD</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">Task 0</li>
+                <li>Task 1</li> -->
+            </ul>
+        </div>
+    </div>
+{% endblock body %}
