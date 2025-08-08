@@ -20,8 +20,8 @@ body{
 
 #addBtn{
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 6px;
+    right: 1200px;
     color: azure;
     background-color: #179712;
     padding: 10px;

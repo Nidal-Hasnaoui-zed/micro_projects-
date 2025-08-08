@@ -10,6 +10,10 @@ def index():
 def todo_app(): 
     return render_template('todo.html');
 
+@app.route('/notes')
+def notes(): 
+    return render_template('notes.html')
+
 if __name__ == '__main__': 
     app.run(debug=True)
     
