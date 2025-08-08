@@ -6,5 +6,10 @@ app = Flask(__name__, template_folder='templates', static_folder='static',static
 def index(): 
     return render_template('index.html')
 
+#the  todo app project !
+@app.route('/todo')
+def todo_app(): 
+    return render_template('todo.html')
+
 if __name__ == '__main__': 
     app.run(debug=True)
