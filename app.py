@@ -11,5 +11,10 @@ def index():
 def todo_app(): 
     return render_template('todo.html')
 
+# footer 
+@app.route('/footer')
+def footer(): 
+    return render_template('footer.html')
+
 if __name__ == '__main__': 
     app.run(debug=True)
