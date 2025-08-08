@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    {% comment %} this nav bar will always show here ! {% endcomment %}
+    
     <input type="checkbox" id="active">
       <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
       <div class="wrapper">
@@ -20,10 +20,10 @@
             <li><a href="#">Feedback</a></li>
          </ul>
       </div>
-      {% comment %} and this what only change bro ! {% endcomment %}
+      
       {% block body %}{% endblock body %}
 
-      {% comment %} and this is my footer always will be here ! {% endcomment %}
+      
       <footer class="footer">
         <div class="container">
         <div class="logo">
