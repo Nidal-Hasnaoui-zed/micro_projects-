@@ -6,6 +6,72 @@
     <title>{% block title %}Home Page{% endblock title %}</title>
 </head>
 <body>
-    
+    {% comment %} this nav bar will always show here ! {% endcomment %}
+    <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Feedback</a></li>
+         </ul>
+      </div>
+      {% comment %} and this what only change bro ! {% endcomment %}
+      {% block body %}{% endblock body %}
+
+      {% comment %} and this is my footer always will be here ! {% endcomment %}
+      <footer class="footer">
+        <div class="container">
+        <div class="logo">
+            <img src="images/html.jpg" alt="Logo">
+            <span style="font-size: 20px; font-weight: bold;">Flowbite</span>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#">Flowbite</a></li>
+                <li><a href="#">Tailwind CSS</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-column">
+            <h3>Follow us</h3>
+            <ul>
+                <li><a href="#">Github</a></li>
+                <li><a href="#">Discord</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-column">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+
+        <hr>
+
+        <div class="container footer-bottom">
+        <span>© 2023 Flowbite™. All Rights Reserved.</span>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook">
+            <svg fill="currentColor" viewBox="0 0 8 19"><path d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"/></svg>
+            </a>
+            <a href="#" aria-label="Discord">
+            <svg fill="currentColor" viewBox="0 0 21 16"><path d="M16.942 1.556a16.3..."/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+            <svg fill="currentColor" viewBox="0 0 20 17"><path d="M20 1.892a8.178..."/></svg>
+            </a>
+        </div>
+        </div>
+  </footer>
 </body>
 </html>
