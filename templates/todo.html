@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
+{% block CSS %} <link rel="stylesheet" href="/css/todo.css"> {% endblock CSS %}
+
 {% block title %}To do list App {% endblock title %}
 
-{% block CSS %}<link rel="stylesheet" href="/CSS/todo.css">{% endblock CSS %}
 
 {% block body %}
     <div class="container">
@@ -18,6 +19,7 @@
             </ul>
         </div>
     </div>
-    {% extends "footer.html" %}
+    
 {% endblock body %}
+ 
 <script src='/JS/todo.js'></script>

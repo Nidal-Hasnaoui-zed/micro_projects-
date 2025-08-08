@@ -11,10 +11,9 @@ def index():
 def todo_app(): 
     return render_template('todo.html')
 
-# footer 
-@app.route('/footer')
-def footer(): 
-    return render_template('footer.html')
-
+# lets see if the nav work !
+@app.route('/nav')
+def nav_bar(): 
+    return render_template('nav.html')
 if __name__ == '__main__': 
     app.run(debug=True)
