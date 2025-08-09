@@ -1,30 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-.wrapper{
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.menu-btn {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
-  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
-  clip-path: circle(25px at calc(100% - 45px) 45px);
-  transition: all 0.3s ease-in-out;
-}
-#active:checked ~ .wrapper{
-  clip-path: circle(75%);
-}
-.menu-btn{
-  position: absolute;
-  z-index: 2;
+  z-index: 1001;
   right: 20px;
-  /* left: 20px; */
   top: 20px;
   height: 50px;
   width: 50px;
@@ -35,17 +25,37 @@
   color: #fff;
   cursor: pointer;
   background: linear-gradient(-135deg, #c850c0, #4158d0);
-  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
   transition: all 0.3s ease-in-out;
 }
-#active:checked ~ .menu-btn{
+
+#active:checked ~ .menu-btn {
   background: #fff;
   color: #4158d0;
 }
-#active:checked ~ .menu-btn i:before{
+
+#active:checked ~ .menu-btn i:before {
   content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
-.wrapper ul{
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+#active:checked ~ .wrapper {
+  clip-path: circle(75%);
+}
+
+.wrapper ul {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,11 +63,12 @@
   list-style: none;
   text-align: center;
 }
-.wrapper ul li{
+
+.wrapper ul li {
   margin: 15px 0;
 }
-.wrapper ul li a{
-  color: none;
+
+.wrapper ul li a {
   text-decoration: none;
   font-size: 30px;
   font-weight: 500;
@@ -67,7 +78,8 @@
   line-height: 50px;
   transition: all 0.3s ease;
 }
-.wrapper ul li a:after{
+
+.wrapper ul li a:after {
   position: absolute;
   content: "";
   background: #fff;
@@ -79,12 +91,11 @@
   z-index: -1;
   transition: transform 0.3s ease;
 }
-.wrapper ul li a:hover:after{
+
+.wrapper ul li a:hover:after {
   transform: scaleY(1);
 }
-.wrapper ul li a:hover{
+
+.wrapper ul li a:hover {
   color: #4158d0;
-}
-input[type="checkbox"]{
-  display: none;
 }

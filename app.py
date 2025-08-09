@@ -14,6 +14,10 @@ def todo_app():
 def notes(): 
     return render_template('notes.html')
 
+@app.route('/password')
+def password(): 
+    return render_template('password.html')
+
 if __name__ == '__main__': 
     app.run(debug=True)
     
